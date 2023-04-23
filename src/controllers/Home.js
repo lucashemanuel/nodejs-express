@@ -1,3 +1,3 @@
 export function Home(request, response) {
-  return response.json("home page");
+  return response.json({ name: request.name, age: request.age });
 }
