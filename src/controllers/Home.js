@@ -1,5 +1,3 @@
-function Home() {
-  return console.log("Home Node Controller");
+export function Home(request, response) {
+  return response.json("home page");
 }
-
-export { Home };

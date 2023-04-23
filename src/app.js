@@ -1,8 +1,13 @@
 import * as dotenv from "dotenv";
 dotenv.config();
 import express from "express";
+import { Home } from "./controllers/Home.js";
+import { Login } from "./controllers/Login.js";
 
 const app = express();
+
+app.get("/", Home);
+app.post("/login", Login);
 
 app.get("/user", (request, response) => {
   return response.json("user");
